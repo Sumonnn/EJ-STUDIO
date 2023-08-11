@@ -1,40 +1,50 @@
 @font-face {
-    font-family: "inter-regular" ;
+    font-family: "inter-regular";
     src: url(./font/64288ea7be3b5907d42825b7_Inter-Regular-Custom.ttf);
 }
+
 @font-face {
     font-family: "inter-semibold";
     src: url(./font/64288ea7be3b59fe062825ba_Inter-SemiBold_Custom.ttf);
 }
+
 @font-face {
-    font-family:"inter-medium" ;
+    font-family: "inter-medium";
     src: url(./font/64288ea7be3b599e1f2825b6_Inter-Medium-Custom.ttf);
 }
+
 @font-face {
-    font-family:"inter-light" ;
+    font-family: "inter-light";
     src: url(./font/64288ea7be3b599cdb2825b9_Inter-Light-Custom.ttf);
 }
+
 @font-face {
     font-family: "ivy";
     src: url(./font/64288ea7be3b5975ab2825b5_ivypresto-regular-custom.otf);
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html,body{
+
+html,
+body {
     width: 100%;
     height: 100%;
+    overflow-y: hidden;
 }
-.main{
+
+.main {
     padding-top: 90vh;
     position: relative;
     z-index: 9;
     overflow-y: hidden;
 }
+
 /* -------------------bg-section--------------------------------- */
-.bg{
+.bg {
     width: 100%;
     height: 100vh;
     position: fixed;
@@ -45,7 +55,8 @@ html,body{
     padding-top: 2vw;
     background-color: #0E0E0E;
 }
-.bg>p{
+
+.bg>p {
     font-family: "inter-medium";
     text-align: center;
     font-size: 0.7vw;
@@ -53,23 +64,26 @@ html,body{
     letter-spacing: 0.3vw;
     color: #FFFFFF;
 }
-.bg>h1{
-     font-family: "ivy";
-     font-size: 18vw;
-     letter-spacing: 1.2vw;
-     font-weight: 100;
-     line-height: 18vw;
+
+.bg>h1 {
+    font-family: "ivy";
+    font-size: 18vw;
+    letter-spacing: 1.2vw;
+    font-weight: 100;
+    line-height: 18vw;
     color: #FFFFFF;
 }
-.bg>h2{
+
+.bg>h2 {
     font-family: "inter-medium";
     font-size: 16vw;
     line-height: 15vw;
     color: #FFFFFF;
     letter-spacing: 2vw;
 }
+
 /* ---------------------navbar-------------------------- */
-nav{
+nav {
     width: 90%;
     margin-left: 5%;
     position: fixed;
@@ -80,13 +94,15 @@ nav{
     justify-content: space-between;
     mix-blend-mode: difference;
 }
-nav>p{
+
+nav>p {
     font-family: "inter-medium";
     font-size: 0.9vw;
     color: #FFFFFF;
     mix-blend-mode: difference;
 }
-nav>.menu{
+
+nav>.menu {
     height: 12px;
     width: 30px;
     display: flex;
@@ -95,25 +111,29 @@ nav>.menu{
     justify-content: space-between;
     cursor: pointer;
 }
-nav>.menu>.line1{
+
+nav>.menu>.line1 {
     width: 100%;
     height: 2px;
     mix-blend-mode: difference;
     background-color: #FFFFFF;
 }
-nav>.menu>.line2{
+
+nav>.menu>.line2 {
     width: 100%;
     height: 3px;
     mix-blend-mode: difference;
     background-color: #FFFFFF;
 }
+
 /* --------------------page1----------------------- */
-.page1{
+.page1 {
     width: 100%;
     height: 100vh;
     position: relative;
 }
-.page1-img{
+
+.page1-img {
     width: 35%;
     height: 100%;
     position: relative;
@@ -124,8 +144,9 @@ nav>.menu>.line2{
     background-size: cover;
     background-position: center;
 }
+
 /* -------------------page2----------------------------- */
-.page2{
+.page2 {
     width: 100%;
     min-height: 110vh;
     position: relative;
@@ -134,13 +155,15 @@ nav>.menu>.line2{
     overflow: hidden;
     background-color: #0E0E0E;
 }
-.page2>p{
+
+.page2>p {
     color: #FFFFFF;
     font-family: "inter-medium";
     font-size: 0.9vw;
     letter-spacing: 0.2vw;
 }
-.page2>h1{
+
+.page2>h1 {
     color: #FFFFFF;
     font-family: "ivy";
     font-size: 5vw;
@@ -150,7 +173,7 @@ nav>.menu>.line2{
 }
 
 /* -------------------page3---------------------------------- */
-.page3{
+.page3 {
     width: 100%;
     height: 120vh;
     position: relative;
@@ -158,23 +181,175 @@ nav>.menu>.line2{
     padding-top: 10vw;
     background-color: #FDFDFD;
 }
-.page3>h1{
+
+.page3>h1 {
     font-family: "inter-medium";
-    font-size: 19vw; 
+    font-size: 19vw;
     text-align: center;
-    font-weight: 600;   
+    font-weight: 600;
     line-height: 22vw;
 }
-.page3>h2{
+
+.page3>h2 {
     font-family: "ivy";
     font-size: 18vw;
     line-height: 18vw;
     font-weight: 100;
     text-align: center;
 }
+
 /* -----------------page4---------------------------------- */
-.page4{
+.page4 {
     width: 100%;
     min-height: 200vh;
+    position: relative;
+    padding-top: 5vw;
     background-color: #0E0E0E;
+}
+
+.page4 .page4-img {
+    width: 35%;
+    height: 100vh;
+    margin-left: 5vw;
+    margin-top: 5vw;
+}
+
+.page4 .page4-img>img {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+}
+
+.page4 .page4-img>h2 {
+    font-family: "ivy";
+    margin-top: 0.5vw;
+    font-size: 2vw;
+    color: #FFFFFF;
+}
+
+.page4 #page4-img2 {
+    margin-left: 59vw;
+}
+
+.page4 .page4-btn {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page4 .page4-btn>button {
+    padding: 1.4vw 5vw;
+    border-radius: 50px;
+    border: 1px solid #FFFFFF;
+    font-size: 1.2vw;
+    color: #FFFFFF;
+    background-color: #0E0E0E;
+}
+
+.page4 .page4-btn>button:hover {
+    background-color: #FFFFFF;
+    color: #0E0E0E;
+    border: 1px solid #0E0E0E;
+    cursor: pointer;
+}
+
+/* --------------------------page5----------------------------------- */
+.page5 {
+    width: 100%;
+    min-height: 120vh;
+    background-color: #FFFFFF;
+    position: relative;
+    margin-top: -190vh;
+}
+
+.page5>h1 {
+    width: 100%;
+    color: #0E0E0E;
+    background-color: #FFFFFF;
+    font-size: 50vw;
+    text-align: center;
+    font-family: "inter-medium";
+    position: absolute;
+}
+
+.page5>p {
+    position: absolute;
+    bottom: 5%;
+    letter-spacing: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "inter-medium";
+    font-weight: 100;
+    font-size: 0.7vw;
+    color: #0E0E0E;
+}
+
+.page5 .para {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1vw;
+    opacity: 0;
+}
+
+.page5 .para>h5 {
+    font-family: "inter-medium";
+    line-height: 3vw;
+}
+
+.page5 .para>p {
+    width: 50%;
+    font-size: 1vw;
+    line-height: 2.5vw;
+    color: #151515;
+    font-family: "gilroy";
+    font-weight: 100
+}
+/* -----------------page6---------------------------------------- */
+.page6{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: #0E0E0E;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.page6>h2{
+     font-size: 9vw;
+     line-height: 9vw;
+     font-weight: 100;
+     font-family: "ivy";
+}
+.page6>p{
+      font-size: 1vw;
+      font-family: "gilroy";
+      width: 15%;
+      margin-top: 5vw;
+      margin-bottom: 3vw;
+      text-align: center;
+      overflow: hidden;
+}
+.page6>button{
+     padding: 1.4vw 4vw;
+     border-radius: 50px;
+     border: 1px solid #FFFFFF;
+     color: #FFFFFF;
+     background-color: #0E0E0E;
+     font-size: 1vw;
+     font-family: "gilroy";
+     cursor: pointer;
+}
+.page6>button:hover{
+    background-color: #FFFFFF;
+    color: #0E0E0E;
+    border: 1px solid #0E0E0E;
+
 }
