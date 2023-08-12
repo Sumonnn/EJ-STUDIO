@@ -135,7 +135,7 @@ page5Animation();
 function cursurFN() {
 
     let crsr = document.querySelector(".cursur");
-    let main = document.querySelector(".main");
+    let main = document.querySelector("body");
     let page4Img = document.querySelectorAll(".page4-img");
 
     main.addEventListener("mousemove", (dets) => {
@@ -174,5 +174,94 @@ function cursurFN() {
         crsr.style.width = `${35}px`;
         crsr.style.height = `${35}px`;
     })
+
+    let enterh1 = document.querySelectorAll(".full-screen>h1");
+    enterh1.forEach((h1) => {
+        h1.addEventListener("mouseenter", () => {
+            crsr.style.width = `${75}px`;
+            crsr.style.height = `${75}px`;
+        })
+        h1.addEventListener("mouseleave", () => {
+            crsr.style.width = `${35}px`;
+            crsr.style.height = `${35}px`;
+        })
+    })
 }
 cursurFN();
+
+function fullScreen() {
+
+
+    let flag = 0;
+    document.querySelector("nav .menu").addEventListener("click", () => {
+        if (flag === 0) {
+            document.querySelector("nav .menu").style.height = `${4}px`;
+            document.querySelector("nav .menu .line1").style.rotate = `${40}deg`;
+            document.querySelector("nav .menu .line2").style.rotate = `${-45}deg`;
+            document.querySelector(".full-screen").style.top = `${0}%`;
+            {
+                let h1AllData = document.querySelectorAll(".full-screen>h1");
+                h1AllData.forEach((elem) => {
+                    elem.style.paddingTop = `${0}vw`;
+                })
+            }
+            flag = 1;
+        }
+        else {
+            document.querySelector("nav .menu").style.height = `${12}px`;
+            document.querySelector("nav .menu .line1").style.rotate = `${0}deg`;
+            document.querySelector("nav .menu .line2").style.rotate = `${0}deg`;
+            document.querySelector(".full-screen").style.top = `${-100}%`;
+            {
+                let h1AllData = document.querySelectorAll(".full-screen>h1");
+                h1AllData.forEach((elem) => {
+                    elem.style.paddingTop = `${10}vw`;
+                })
+            }
+            flag = 0;
+        }
+    })
+}
+
+fullScreen();
+
+
+let loderTL = gsap.timeline();
+
+loderTL
+        .to(".loder .loder-text .rotate-text>p",{
+            y:-62,
+            duration:1.8,
+            delay:0.5,
+        })
+        .to(".loder .loder-text",{
+            y:-50,
+            rotateX:-30,
+            opacity:0,
+            duration:0.8,
+        })
+        .to(".loder #loder1",{
+            height:0,
+            duration:0.5,
+            delay:0.3,
+        },'a')
+        .to(".loder #loder2",{
+            height:0,
+            duration:0.5,
+            delay:-0.4,
+        })
+        .to(".loder #loder3",{
+            height:0,
+            duration:0.5,
+            delay:0.3,
+        },'a')
+        .to(".loder #loder4",{
+            height:0,
+            duration:0.5,
+            delay:-0.2,
+        })
+        .to(".loder",{
+            top:'-100vh',
+            duration:0.1,
+        })
+

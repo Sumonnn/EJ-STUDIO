@@ -42,6 +42,45 @@ body {
     z-index: 9;
     overflow-y: hidden;
 }
+/* -----------------loder----------------------------------------- */
+.loder{
+    width: 100%;
+    height: 100vh;
+    /* background-color: red; */
+    position: absolute;
+    top: 0;
+    display: flex;
+    z-index: 999999;
+}
+.loder .loders{
+    width: 25%;
+    height: 100%;
+    background-color: #FFFFFF;
+    border-right: 0.5px solid rgba(0, 0, 0, 0.445);
+
+}
+.loder .loder-text{
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    gap: 2vw;
+}
+.loder .loder-text>h4{
+    /* background-color: chartreuse; */
+    font-family: "inter-medium";
+    font-size: 1.6vw;
+}
+.loder .loder-text .rotate-text{
+    height: 35px;
+    overflow: hidden;
+    /* background-color: fuchsia; */
+}
+.loder .loder-text .rotate-text>p{
+    font-family: "inter-medium";
+    font-size: 1.6vw;
+}
 
 /* -------------------bg-section--------------------------------- */
 .bg {
@@ -140,10 +179,51 @@ nav>.menu>.line2 {
     color: #0E0E0E;
     font-family: "gilroy";
     background-color: transparent;
-    z-index: 999999999999;
+    z-index: 9999;
     mix-blend-mode: difference;
 }
-
+/* --------------------full-screen------------------------------- */
+.full-screen{
+    width: 100%;
+    height: 100vh;
+    background-color:#0E0E0E;
+    position: absolute;
+    top: -100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    flex-direction: column;
+    z-index: 99;
+    transition: 0.5s ease-out;
+}
+.full-screen>h1{
+    height: 10vw;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 10vw;
+    font-family: "ivy";
+    line-height: 10vw;
+    position: relative;
+    cursor: pointer;
+    letter-spacing: 4px;
+    /* background-color: red; */
+    padding-top: 10vw;    
+    overflow: hidden;
+    transition: 1.5s ease-in-out;
+}
+.full-screen>h1::after{
+    content: "";
+    border-bottom: 2px solid white;
+    width: 0%;
+    position: absolute;
+    left: 0;
+    bottom: 0%;
+    transition: 0.4s ease-out;
+}
+.full-screen h1:hover::after{
+    width: 100%;
+}
 /* --------------------page1----------------------- */
 .page1 {
     width: 100%;
@@ -157,6 +237,7 @@ nav>.menu>.line2 {
     position: relative;
     left: 50%;
     top: 0%;
+    /* z-index: 1; */
     transform: translateX(-50%);
     background-image: url(https://uploads-ssl.webflow.com/64288ea7be3b591ebd282598/643567645e1dcede0434aa3c_sdad-p-2000.jpg);
     background-size: cover;
