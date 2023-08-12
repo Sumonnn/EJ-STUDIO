@@ -222,9 +222,10 @@ function fullScreen() {
         }
     })
 }
-
 fullScreen();
 
+function loder(){
+    
 
 let loderTL = gsap.timeline();
 
@@ -265,3 +266,6 @@ loderTL
             duration:0.1,
         })
 
+
+}
+loder();
