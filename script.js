@@ -107,8 +107,7 @@ gsap.from(".page4 .page4-img>img", {
     }
 })
 
-
-function page5Animation(){
+function page5Animation() {
     let page5TL = gsap.timeline({
         scrollTrigger: {
             trigger: ".page5",
@@ -123,12 +122,57 @@ function page5Animation(){
             scale: 4,
             filter: 'blur(20px)',
             opacity: 0,
-        },'b')
-        .to(".page5>.para",{
-            opacity:1,
+        }, 'b')
+        .to(".page5>.para", {
+            opacity: 1,
         })
-        .to(".bg",{
-             display:"none",
-        },'b')
+        .to(".bg", {
+            display: "none",
+        }, 'b')
 }
 page5Animation();
+
+function cursurFN() {
+
+    let crsr = document.querySelector(".cursur");
+    let main = document.querySelector(".main");
+    let page4Img = document.querySelectorAll(".page4-img");
+
+    main.addEventListener("mousemove", (dets) => {
+        crsr.style.top = dets.y + 15 + 'px';
+        crsr.style.left = dets.x + 15 + 'px';
+    })
+
+    page4Img.forEach((img) => {
+        img.addEventListener("mouseenter", () => {
+            crsr.style.width = `${100}px`;
+            crsr.style.height = `${100}px`;
+            crsr.style.backgroundColor = `white`;
+            crsr.innerHTML = "MORE";
+        })
+        img.addEventListener("mouseleave", () => {
+            crsr.style.width = `${35}px`;
+            crsr.style.height = `${35}px`;
+            crsr.style.backgroundColor = `transparent`;
+            crsr.innerHTML = " ";
+        })
+    })
+
+    document.querySelector("nav>p").addEventListener("mouseenter", () => {
+        crsr.style.width = `${75}px`;
+        crsr.style.height = `${75}px`;
+    })
+    document.querySelector("nav>p").addEventListener("mouseleave", () => {
+        crsr.style.width = `${35}px`;
+        crsr.style.height = `${35}px`;
+    })
+    document.querySelector("nav>.menu").addEventListener("mouseenter", () => {
+        crsr.style.width = `${75}px`;
+        crsr.style.height = `${75}px`;
+    })
+    document.querySelector("nav>.menu").addEventListener("mouseleave", () => {
+        crsr.style.width = `${35}px`;
+        crsr.style.height = `${35}px`;
+    })
+}
+cursurFN();

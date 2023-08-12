@@ -99,6 +99,7 @@ nav>p {
     font-family: "inter-medium";
     font-size: 0.9vw;
     color: #FFFFFF;
+    cursor: pointer;
     mix-blend-mode: difference;
 }
 
@@ -124,6 +125,23 @@ nav>.menu>.line2 {
     height: 3px;
     mix-blend-mode: difference;
     background-color: #FFFFFF;
+}
+/* --------------------cursur--------------------------- */
+.cursur{
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
+    border: 1px solid rgba(135, 131, 131, 0.546);
+    border-radius: 50px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0E0E0E;
+    font-family: "gilroy";
+    background-color: transparent;
+    z-index: 999999999999;
+    mix-blend-mode: difference;
 }
 
 /* --------------------page1----------------------- */
